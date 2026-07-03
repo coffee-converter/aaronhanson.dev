@@ -1,0 +1,6 @@
+# static site - no build step, nothing to compile
+.DS_Store
+.vercel
+*.br
+.web-resume.*
+public/_previews/

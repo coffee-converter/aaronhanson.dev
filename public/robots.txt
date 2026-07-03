@@ -1,0 +1,5 @@
+# everything is fair game; there's only one page.
+User-agent: *
+Allow: /
+
+Sitemap: https://aaronhanson.dev/sitemap.xml

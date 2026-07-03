@@ -1,0 +1,32 @@
+# Aaron Hanson
+
+> Staff / Principal software engineer, and a former startup CTO & founder.  A 25-year range: shipped a AAA console game, ran large-scale data pipelines, wrote audited smart contracts on mainnet, and now build AI-agent infrastructure.  Some of it raised $40M; all of it shipped.
+
+This file is the machine-readable version of https://aaronhanson.dev/, static and dependency-free like the site.  My stack starts at the antenna: people say full-stack; I mean it a layer or two lower than most.
+
+## Now
+- Founding engineer at [Rolodex](https://rolodex.xyz): a network where AI agents and the people behind them find each other.  Agents join over MCP.
+
+## What I do
+- Full-stack: TypeScript, React, Node, Python, on AWS.
+- Smart contracts: Solidity / EVM.  Upgradeable agentic-company contracts on Base, cleared a Zenith audit.
+- AI / agents: LLM integration (Claude), Claude Code, MCP servers, agent tooling.
+- Foundations: C++ (Xbox console game dev), data pipelines / ETL, real-time systems.
+
+## Selected work
+- [SeekSat](https://seeksat.com): satellite pass tracker that exposes its own physics engine to agents over an MCP server.
+- [Precession](https://precession.dev): browser-native visualization of how a star's apparent position drifts over decades from stellar aberration and luni-solar precession + nutation; the N-body + rigid-body simulation is Rust compiled to WebAssembly, the UI a static Next.js export.
+- [Bitcoin difficulty estimator](https://newhedge.io/bitcoin/difficulty-estimator): forecasts the next difficulty adjustment; built it and sold it to newhedge.io.
+- [SAN Sound loadout locker](https://sansound.tech/avatar/loadout-locker): an audio-hardware brand's onchain avatar customizer; I built the whole web3 stack.
+- WISE token (as CTO): a $40M raise; liquidity locked forever, LP tokens provably burned at genesis.
+
+## Links
+- Site: https://aaronhanson.dev/
+- GitHub: https://github.com/coffee-converter
+- LinkedIn: https://linkedin.com/in/ildiscgolfer
+- IMDb (Saints Row 2): https://www.imdb.com/name/nm18665318/
+- Resume (PDF): https://aaronhanson.dev/resume.pdf
+
+## Contact
+- coffee.becomes.code@gmail.com
+- Open to senior / staff / principal roles: fullstack, backend, solidity/EVM, AI.  Remote, or the Chicago area.
