@@ -78,3 +78,14 @@ python3 -m http.server 8123 --bind 127.0.0.1 --directory public
 Vercel, framework preset **Other**, **Root Directory = `public`**, no build
 command, no output directory. That scopes the deploy to `public/`, so the dev
 scripts at the repo root are never uploaded or served. Domain: aaronhanson.dev.
+
+## License
+
+The code and tooling (the page markup, `check.sh`, `stamp.py`, `cspsum.py`,
+`make-og.py`, config) are [MIT](LICENSE) - take the one-packet page technique,
+the CSP hash-pinning, or the self-referential byte badge and use them freely.
+
+Not covered by MIT: the personal content (resume, bio, headshot, `og.png`) is
+copyright Aaron Hanson, and the files under `docs/` are third-party material
+kept for reference and remain the property of their owners (the Nifty Gateway
+post is copyright Nifty Gateway; the Zenith report is copyright Zenith).
