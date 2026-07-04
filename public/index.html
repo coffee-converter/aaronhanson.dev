@@ -39,9 +39,8 @@ dt a{color:var(--ink)}
 dd{margin:0;color:var(--dim)}
 .bridge{margin:.2rem 0 1rem}
 dd a{color:inherit}
-@property --u{syntax:"<number>";inherits:false;initial-value:.67}
-dt a,dd a{--u:.67;text-decoration:none;padding-bottom:4px;background:linear-gradient(rgb(from var(--acc) r g b/var(--u)),rgb(from var(--acc) r g b/var(--u))) 0 100%/100% 1px no-repeat;transition:color .28s cubic-bezier(.4,0,.2,1) .05s,--u .28s cubic-bezier(.4,0,.2,1)}
-dt a:hover,dt a:focus-visible,dd a:hover,dd a:focus-visible{color:var(--acc);--u:1;animation:uw .28s cubic-bezier(.4,0,.2,1)}
+dt a,dd a{text-decoration:none;padding-bottom:4px;background:linear-gradient(var(--acc),var(--acc)) 0 100%/100% 1px no-repeat;transition:color .28s cubic-bezier(.4,0,.2,1) .05s}
+dt a:hover,dt a:focus-visible,dd a:hover,dd a:focus-visible{color:var(--acc);animation:uw .28s cubic-bezier(.4,0,.2,1)}
 @keyframes uw{0%{background-size:100% 1px}50%{background-size:20% 1px}100%{background-size:100% 1px}}
 @media(prefers-reduced-motion:reduce){dt a:hover,dt a:focus-visible,dd a:hover,dd a:focus-visible{animation:none}}
 figure{margin:1.2rem 0 0}
@@ -64,7 +63,7 @@ a:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
 <header>
   <h1>AARON HANSON</h1>
   <!-- yes, the byte count includes these comments -->
-  <span class="bytes">[ 14,782 bytes ]</span>
+  <span class="bytes">[ 14,619 bytes ]</span>
 </header>
 
 <!-- two spaces after every period.  i like how it reads.  sue me. -->
@@ -75,7 +74,7 @@ it still runs.</p>
 <p class="kicker">People say full-stack; my stack starts at the antenna.</p>
 
 <p class="note">This page arrives in a single round trip.&nbsp; My first
-computer had 64 kilobytes of memory; this page fits in it 4.43 times.&nbsp; View
+computer had 64 kilobytes of memory; this page fits in it 4.48 times.&nbsp; View
 source; it is meant to be read.</p>
 
 <h2>SIDE WORK</h2>
