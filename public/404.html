@@ -6,8 +6,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <title>404 · Aaron Hanson</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'>%3Cstyle%3Erect{fill:%23c23a00}@media(prefers-color-scheme:dark){rect{fill:%23ff6a2b}}%3C/style%3E<rect x='3' y='3' width='10' height='10'/></svg>">
 <style>
-  :root{--paper:#f6f6f4;--ink:#1b1d1f;--dim:#6d7278;--acc:#d44000}
+  :root{--paper:#f6f6f4;--ink:#1b1d1f;--dim:#64696f;--acc:#c23a00}
   @media(prefers-color-scheme:dark){:root{--paper:#121416;--ink:#d6d8da;--dim:#83888e;--acc:#ff6a2b}}
   *{box-sizing:border-box}
   body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
@@ -16,16 +17,23 @@
   main{max-width:46ch;padding:2.4rem}
   h1{font-size:1rem;font-weight:700;letter-spacing:.22em;margin:0 0 1.5rem}
   p{color:var(--dim);margin:0 0 1rem}
-  a{color:inherit;text-decoration-color:var(--acc);text-decoration-thickness:1px;text-underline-offset:4px}
-  a:hover,a:focus-visible{color:var(--acc)}
+  .sep{color:var(--dim)}
+  a{color:inherit;text-decoration:none;padding-bottom:4px;background:linear-gradient(var(--acc),var(--acc)) 0 100%/100% 1px no-repeat;transition:color .28s cubic-bezier(.4,0,.2,1) .05s}
+  a:hover,a:focus-visible{color:var(--acc);animation:uw .28s cubic-bezier(.4,0,.2,1)}
+  @keyframes uw{0%{background-size:100% 1px}50%{background-size:20% 1px}100%{background-size:100% 1px}}
+  a:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){a:hover,a:focus-visible{animation:none}}
+  /* empty set: this address has no body - nothing here to close over */
+  .void{color:var(--acc);font-size:1.05rem;line-height:1;margin-top:2.4rem}
 </style>
 </head>
 <body>
 <main>
-  <h1>404 &middot; NOT FOUND</h1>
+  <h1>404 <span class="sep">&middot;</span> NOT FOUND</h1>
   <p>this address has no body.&nbsp; nine of them are next door, orbiting.</p>
   <p>whatever you were after either moved, never existed, or failed to check out, and on this site, things that don't check out don't stay.</p>
   <p><a href="/">back to the parts that exist &rarr;</a></p>
+  <div class="void" aria-hidden="true">&#8709;</div>
 </main>
 </body>
 </html>
