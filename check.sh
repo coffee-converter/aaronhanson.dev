@@ -27,6 +27,15 @@ else
   note "FAIL byte badge: says $badge, file is $actual"; fail=1
 fi
 
+# 1b. hex badge (hover overlay):  [ 0x391B bytes ]  must equal actual size in hex
+hexbadge=$(grep -oE 'class="x" aria-hidden="true">\[ 0x[0-9A-Fa-f]+ bytes \]' "$FILE" | grep -oE '0x[0-9A-Fa-f]+')
+wanthex=$(python3 -c "print(f'0x{$actual:04X}')")
+if [ "$hexbadge" = "$wanthex" ]; then
+  note "ok   hex badge:  $hexbadge = actual $wanthex"
+else
+  note "FAIL hex badge:  says $hexbadge, should be $wanthex"; fail=1
+fi
+
 # 2. ratio:  fits in it 7.29 times   (floor(65536 / bytes) to 2 decimals, so
 #    the "fits" claim is a truthful lower bound and never rounds up)
 stated=$(grep -oE 'fits in it [0-9]+\.[0-9]{2} times' "$FILE" | grep -oE '[0-9]+\.[0-9]{2}')

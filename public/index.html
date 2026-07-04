@@ -28,7 +28,9 @@ font:15px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 main{max-width:66ch;margin:0 auto;padding:9vh 1.4rem}
 header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
 h1{font-size:1.05rem;font-weight:700;letter-spacing:.22em;margin:0}
-.bytes{color:var(--acc);font-size:.8rem;letter-spacing:.08em;white-space:nowrap}
+.bytes{position:relative;color:var(--acc);font-size:.8rem;letter-spacing:.08em;white-space:nowrap}
+.bytes .x{position:absolute;left:0;top:0;background:var(--paper);clip-path:inset(0 87.5% 0 12.5%);transition:clip-path .24s steps(6)}
+.bytes:hover .x{clip-path:inset(0 50% 0 12.5%)}
 .lede{margin:2.6rem 0 0}
 .kicker{margin:1.1rem 0 0}
 .note{color:var(--dim);margin:1.4rem 0 0}
@@ -42,7 +44,7 @@ dd a{color:inherit}
 dt a,dd a{text-decoration:none;padding-bottom:4px;background:linear-gradient(var(--acc),var(--acc)) 0 100%/100% 1px no-repeat;transition:color .28s cubic-bezier(.4,0,.2,1) .05s}
 dt a:hover,dt a:focus-visible,dd a:hover,dd a:focus-visible{color:var(--acc);animation:uw .28s cubic-bezier(.4,0,.2,1)}
 @keyframes uw{0%{background-size:100% 1px}50%{background-size:20% 1px}100%{background-size:100% 1px}}
-@media(prefers-reduced-motion:reduce){dt a:hover,dt a:focus-visible,dd a:hover,dd a:focus-visible{animation:none}}
+@media(prefers-reduced-motion:reduce){dt a:hover,dt a:focus-visible,dd a:hover,dd a:focus-visible{animation:none}.bytes .x{transition:none}}
 figure{margin:1.2rem 0 0}
 canvas{width:100%;height:auto;display:block;border:1px solid var(--hair);background:transparent;cursor:pointer;touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 figcaption{margin-top:.5rem;font-size:.85rem}
@@ -63,7 +65,7 @@ a:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
 <header>
   <h1>AARON HANSON</h1>
   <!-- yes, the byte count includes these comments -->
-  <span class="bytes">[ 14,619 bytes ]</span>
+  <span class="bytes"><span class="d">[ 14,926 bytes ]</span><span class="x" aria-hidden="true">[ 0x3A4E bytes ]</span></span>
 </header>
 
 <!-- two spaces after every period.  i like how it reads.  sue me. -->
@@ -74,7 +76,7 @@ it still runs.</p>
 <p class="kicker">People say full-stack; my stack starts at the antenna.</p>
 
 <p class="note">This page arrives in a single round trip.&nbsp; My first
-computer had 64 kilobytes of memory; this page fits in it 4.48 times.&nbsp; View
+computer had 64 kilobytes of memory; this page fits in it 4.39 times.&nbsp; View
 source; it is meant to be read.</p>
 
 <h2>SIDE WORK</h2>
