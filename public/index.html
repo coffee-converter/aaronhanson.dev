@@ -25,10 +25,10 @@
 @media(prefers-color-scheme:dark){:root{--paper:#121416;--ink:#d6d8da;--dim:#83888e;--acc:#ff6a2b;--hair:#26292c}}
 body{margin:0;background:var(--paper);color:var(--ink);
 font:15px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-main{max-width:66ch;margin:0 auto;padding:9vh 1.4rem}
+main{max-width:66ch;margin:0 auto;padding:9vh 1.4rem 4.5vh}
 header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
 h1{font-size:1.05rem;font-weight:700;letter-spacing:.22em;margin:0}
-.bytes{position:relative;color:var(--acc);font-size:.8rem;letter-spacing:.08em;white-space:nowrap}
+.bytes{position:relative;color:var(--acc);font-size:.8rem;letter-spacing:.08em;white-space:nowrap;cursor:help}
 .bytes .x{position:absolute;left:0;top:0;background:var(--paper);clip-path:inset(0 87.5% 0 12.5%);transition:clip-path .24s steps(6)}
 .bytes:hover .x{clip-path:inset(0 50% 0 12.5%)}
 .lede{margin:2.6rem 0 0}
@@ -51,6 +51,8 @@ figcaption{margin-top:.5rem;font-size:.85rem}
 figcaption span{display:block;color:var(--dim);font-size:.78rem;max-width:58ch}
 footer{margin-top:9vh;color:var(--dim);font-size:.8rem;letter-spacing:.06em}
 footer b{color:var(--ink);font-weight:400}
+.sep{color:var(--acc)}
+.qed{color:var(--acc);margin-top:3.2vh;font-size:.9rem;line-height:1}
 .fp{white-space:nowrap}
 a:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
 @media(max-width:480px){dl{grid-template-columns:1fr}dd{margin:0 0 .5rem}}
@@ -65,7 +67,7 @@ a:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
 <header>
   <h1>AARON HANSON</h1>
   <!-- yes, the byte count includes these comments -->
-  <span class="bytes"><span class="d">[ 14,926 bytes ]</span><span class="x" aria-hidden="true">[ 0x3A4E bytes ]</span></span>
+  <span class="bytes"><span class="d">[ 15,162 bytes ]</span><span class="x" aria-hidden="true">[ 0x3B3A bytes ]</span></span>
 </header>
 
 <!-- two spaces after every period.  i like how it reads.  sue me. -->
@@ -76,7 +78,7 @@ it still runs.</p>
 <p class="kicker">People say full-stack; my stack starts at the antenna.</p>
 
 <p class="note">This page arrives in a single round trip.&nbsp; My first
-computer had 64 kilobytes of memory; this page fits in it 4.39 times.&nbsp; View
+computer had 64 kilobytes of memory; this page fits in it 4.32 times.&nbsp; View
 source; it is meant to be read.</p>
 
 <h2>SIDE WORK</h2>
@@ -144,7 +146,8 @@ has the author.</p>
   or chicago suburbs.</dd>
 </dl>
 
-<footer><span class="fp">1 request &middot; no cookies</span><span class="fs"> &middot; </span><span class="fp">exhibits are live &middot; please touch</span></footer>
+<footer><span class="fp">1 request <span class="sep">&middot;</span> no cookies</span><span class="fs"> <span class="sep">&middot;</span> </span><span class="fp">exhibits are live <span class="sep">&middot;</span> please touch</span></footer>
+<div class="qed" aria-hidden="true">&#8718;</div>
 </main>
 
 <!-- "please touch" means please touch. the console too, back on the page. -->
