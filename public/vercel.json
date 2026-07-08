@@ -6,7 +6,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; script-src 'sha256-B6pAVt1lxdZItdZ2GdYZyPIK5tH9++M3zqH67ErlB0Q='; style-src 'sha256-DwEU34h+5FVH6Ce6vyb8BxHWOUpk2SVS+Zy0o666wfY=' 'sha256-HCsgWakDjOVb9h998KrJKyR9OBW/nc8kyUKmi0TRdlg='; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+          "value": "default-src 'none'; script-src 'sha256-B6pAVt1lxdZItdZ2GdYZyPIK5tH9++M3zqH67ErlB0Q='; style-src 'sha256-DwEU34h+5FVH6Ce6vyb8BxHWOUpk2SVS+Zy0o666wfY=' 'sha256-F1dldmXi+L4/bNLD698GAsJVv7unZjJE+IhNJDmrmrs='; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
         },
         { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
