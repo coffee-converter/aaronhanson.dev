@@ -25,7 +25,7 @@
 @media(prefers-color-scheme:dark){:root{--paper:#121416;--ink:#d6d8da;--dim:#83888e;--acc:#ff6a2b;--hair:#26292c}}
 body{margin:0;background:var(--paper);color:var(--ink);
 font:15px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-main{max-width:66ch;margin:0 auto;padding:9vh 1.4rem 4.5vh}
+main{max-width:72ch;margin:0 auto;padding:9vh 1.4rem 4.5vh}
 header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
 h1{font-size:1.05rem;font-weight:700;letter-spacing:.22em;margin:0}
 .bytes{position:relative;color:var(--acc);font-size:.8rem;letter-spacing:.08em;white-space:nowrap;cursor:help}
@@ -34,8 +34,12 @@ h1{font-size:1.05rem;font-weight:700;letter-spacing:.22em;margin:0}
 .lede{margin:2.6rem 0 0}
 .kicker{margin:1.1rem 0 0}
 .note{color:var(--dim);margin:1.4rem 0 0}
-h2{font-size:.78rem;font-weight:400;letter-spacing:.3em;color:var(--dim);margin:3.4rem 0 1rem}
+h2{font-size:.85rem;font-weight:400;letter-spacing:.3em;color:var(--dim);margin:3.4rem 0 1rem}
 dl{margin:0;display:grid;grid-template-columns:minmax(11ch,max-content) 1fr;column-gap:2.2ch;row-gap:.55rem}
+.lead{column-gap:1.4ch;align-items:baseline}
+.lead dt{display:flex;align-items:baseline;overflow:hidden}
+.lead dt a{line-height:1}
+.lead dt::after{content:"";flex:1;min-width:1.3ch;align-self:center;height:3px;margin-left:1.4ch;opacity:.65;background:radial-gradient(circle,var(--dim) 1.1px,transparent 1.6px) 0 0/9px 3px repeat-x}
 dt{margin:0}
 dt a{color:var(--ink)}
 dd{margin:0;color:var(--dim)}
@@ -55,11 +59,11 @@ footer b{color:var(--ink);font-weight:400}
 .qed{width:.5rem;height:.5rem;background:var(--acc);margin-top:3.2vh}
 .fp{white-space:nowrap}
 a:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
-@media(max-width:480px){dl{grid-template-columns:1fr}dd{margin:0 0 .5rem}}
+@media(max-width:480px){dl{grid-template-columns:1fr}dd{margin:0 0 .5rem}.lead dt::after{display:none}}
 @media(max-width:540px){.fp{display:block}.fs{display:none}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Aaron Hanson","jobTitle":"Staff / Principal Software Engineer","url":"https://aaronhanson.dev/","email":"coffee.becomes.code@gmail.com","sameAs":["https://github.com/coffee-converter","https://linkedin.com/in/ildiscgolfer","https://orcid.org/0009-0000-8432-3816"],"address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"}}
+{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://aaronhanson.dev/#me","name":"Aaron Hanson","jobTitle":"Staff / Principal Software Engineer","url":"https://aaronhanson.dev/","email":"coffee.becomes.code@gmail.com","sameAs":["https://github.com/coffee-converter","https://linkedin.com/in/ildiscgolfer","https://orcid.org/0009-0000-8432-3816"],"address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"}},{"@type":"WebApplication","name":"On The Money","url":"https://onthemoney.fyi/","applicationCategory":"GovernmentApplication","operatingSystem":"Web","creator":{"@id":"https://aaronhanson.dev/#me"}},{"@type":"WebApplication","name":"SeekSat","url":"https://seeksat.com/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","creator":{"@id":"https://aaronhanson.dev/#me"}},{"@type":"WebApplication","name":"precession.dev","url":"https://precession.dev/","applicationCategory":"EducationalApplication","operatingSystem":"Web","creator":{"@id":"https://aaronhanson.dev/#me"}}]}
 </script>
 </head>
 <body>
@@ -67,29 +71,29 @@ a:focus-visible{outline:1px solid var(--acc);outline-offset:3px}
 <header>
   <h1>AARON HANSON</h1>
   <!-- yes, the byte count includes these comments -->
-  <span class="bytes"><span class="d">[ 15,249 bytes ]</span><span class="x" aria-hidden="true">[ 0x3B91 bytes ]</span></span>
+  <span class="bytes"><span class="d">[ 16,411 bytes ]</span><span class="x" aria-hidden="true">[ 0x401B bytes ]</span></span>
 </header>
 
 <!-- two spaces after every period.  i like how it reads.  sue me. -->
-<p class="lede">Engineer.&nbsp; I've written C++ for Xbox, Python for data
-pipelines, TypeScript for startups, and Solidity for mainnet.&nbsp; Most of
-it still runs.</p>
+<p class="lede">Engineer.&nbsp; C++ for Xbox, Python for data pipelines,
+TypeScript for startups, and Solidity for mainnet.&nbsp; Most of it still runs.</p>
 
 <p class="kicker">People say full-stack; my stack starts at the antenna.</p>
 
-<p class="note">This page arrives in a single round trip.&nbsp; My first
-computer had 64 kilobytes of memory; this page fits in it 4.29 times.&nbsp; View
-source; it is meant to be read.</p>
+<p class="note">Arrives in one round trip.&nbsp; My first computer had 64
+kilobytes; this page fits in it 3.99 times.&nbsp; View source; meant to be read.</p>
 
 <h2>SIDE WORK</h2>
 <p class="bridge">My wife has stopped asking what I'm building:</p>
-<dl>
+<dl class="lead">
+  <dt><a target="_blank" href="https://onthemoney.fyi">onthemoney.fyi</a></dt>
+  <dd>an agent answers who funds congress, grounded in fec filings and drawn on a map.</dd>
   <dt><a target="_blank" href="https://seeksat.com">seeksat.com</a></dt>
   <dd>satellite pass tracker.&nbsp; know down to the second when the sky is watching back.</dd>
   <dt><a target="_blank" href="https://precession.dev">precession.dev</a></dt>
   <dd>precession, nutation, aberration, integrated from gravity.&nbsp; written in rust.</dd>
   <dt><a target="_blank" href="https://github.com/coffee-converter/doppler1090">doppler1090</a></dt>
-  <dd>aircraft doppler off 1090 mhz, measured vs. physics.&nbsp; the antenna line, literally.</dd>
+  <dd>aircraft doppler off 1090 mhz, measured vs. physics.&nbsp; the antenna, literally.</dd>
   <dt><a target="_blank" href="https://newhedge.io/bitcoin/difficulty-estimator">difficulty estimator</a></dt>
   <dd>forecasts bitcoin's next difficulty adjustment.&nbsp; built it, sold it to newhedge.</dd>
 </dl>
@@ -101,7 +105,7 @@ source; it is meant to be read.</p>
   of javascript.&nbsp; chaos is fine; conserve what matters.</span></figcaption></figure>
 
 <h2>HISTORY</h2>
-<dl>
+<dl class="lead">
   <dt>rolodex</dt>
   <dd>founding engineer.&nbsp; where AI agents and the people behind them find
   each other; <a target="_blank" href="https://rolodex.xyz">agents join via MCP</a>.&nbsp; now</dd>
@@ -132,7 +136,7 @@ has the author.</p>
 
 <h2>CONTACT</h2>
 <p class="bridge">Coffee in, code out.&nbsp; Say hi.</p>
-<dl>
+<dl class="lead">
   <dt><a href="mailto:coffee.becomes.code@gmail.com">email</a></dt>
   <dd>coffee.becomes.code@gmail.com</dd>
   <dt><a target="_blank" href="https://github.com/coffee-converter">github</a></dt>
