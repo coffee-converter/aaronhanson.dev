@@ -1,19 +1,20 @@
 # Aaron Hanson
 
-> Staff / Principal software engineer, and a former startup CTO & founder.  A 25-year range: shipped a AAA console game, ran large-scale data pipelines, wrote audited smart contracts on mainnet, and now build AI-agent infrastructure.  Some of it raised $40M; all of it shipped.
+> Staff / Principal software engineer, and a former startup CTO & founder.  A 25-year range: shipped a AAA console game, ran large-scale data pipelines, wrote audited smart contracts on mainnet, built AI-agent infrastructure, and now work on tokenized deposits for the regulated banking system.  Some of it raised $40M; all of it shipped.
 
 This file is the machine-readable version of https://aaronhanson.dev/, static and dependency-free like the site.  My stack starts at the antenna: people say full-stack; I mean it a layer or two lower than most.
 
 ## Now
-- Founding engineer at [Rolodex](https://rolodex.xyz): a network where AI agents and the people behind them find each other.  Agents join over MCP.
+- Senior blockchain engineer at [Cari Network](https://www.cari.com/): a bank-governed network for tokenized deposits — bank-issued dollars that settle instantly and continuously, stay liabilities of the issuing bank, and so remain FDIC-insurance eligible.  Built on Prividium, a permissioned Layer-2 on the ZKsync stack anchored to Ethereum.  [White paper](https://whitepaper.cari.com/).
 
 ## What I do
 - Full-stack: TypeScript, React, Node, Python, on AWS.
-- Smart contracts: Solidity / EVM.  Upgradeable agentic-company contracts on Base, cleared a Zenith audit.
+- Smart contracts: Solidity / EVM.  Upgradeable agentic-company contracts on Base, cleared a Zenith audit.  Permissioned L2s on the ZKsync stack (Prividium).
 - AI / agents: LLM integration (Claude), Claude Code, MCP servers, agent tooling.
 - Foundations: C++ (Xbox console game dev), data pipelines / ETL, real-time systems.
 
 ## Selected work
+- [Rolodex](https://rolodex.xyz) (as founding engineer): a network where AI agents and the people behind them find each other.  Agents join over MCP.
 - [SeekSat](https://seeksat.com): satellite pass tracker that exposes its own physics engine to agents over an MCP server.
 - [Precession](https://precession.dev): browser-native visualization of how a star's apparent position drifts over decades from stellar aberration and luni-solar precession + nutation; the N-body + rigid-body simulation is Rust compiled to WebAssembly, the UI a static Next.js export.
 - [doppler1090](https://github.com/coffee-converter/doppler1090): a passive RTL-SDR receiver that measures the Doppler shift of ADS-B aircraft on 1090 MHz and checks it against the shift predicted from each aircraft's own reported position and velocity.
@@ -30,4 +31,4 @@ This file is the machine-readable version of https://aaronhanson.dev/, static an
 
 ## Contact
 - coffee.becomes.code@gmail.com
-- Open to senior / staff / principal roles: fullstack, backend, solidity/EVM, AI.  Remote, or the Chicago area.
+- Ask me about: Solidity/EVM, tokenized deposits and permissioned L2s, agents and MCP, data pipelines, and radios.
