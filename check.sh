@@ -4,7 +4,7 @@
 # or a blown size budget fails the deploy instead of shipping.
 #
 #   1. the byte-count badge equals index.html's actual size
-#   2. "fits in it N.NN times" equals floor(65536 / bytes) to 2 decimals
+#   2. "enough to hold this page N.NN times" equals floor(65536 / bytes) to 2 decimals
 #   3. the brotli-compressed page fits one round trip (< 14 KiB initcwnd)
 #
 # Usage: ./check.sh   (exit 0 = all claims hold, non-zero = mismatch)
@@ -36,9 +36,9 @@ else
   note "FAIL hex badge:  says $hexbadge, should be $wanthex"; fail=1
 fi
 
-# 2. ratio:  fits in it 7.29 times   (floor(65536 / bytes) to 2 decimals, so
+# 2. ratio:  enough to hold this page 7.29 times   (floor(65536 / bytes) to 2 decimals, so
 #    the "fits" claim is a truthful lower bound and never rounds up)
-stated=$(grep -oE 'fits in it [0-9]+\.[0-9]{2} times' "$FILE" | grep -oE '[0-9]+\.[0-9]{2}')
+stated=$(grep -oE 'enough to hold this page [0-9]+\.[0-9]{2} times' "$FILE" | grep -oE '[0-9]+\.[0-9]{2}')
 want=$(python3 -c "h=65536*100//$actual; print(f'{h//100}.{h%100:02d}')")
 if [ "$stated" = "$want" ]; then
   note "ok   64KB ratio: $stated = 65536/$actual"

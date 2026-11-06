@@ -15,8 +15,9 @@ This file is the machine-readable version of https://aaronhanson.dev/, static an
 
 ## Selected work
 - [Rolodex](https://rolodex.xyz) (as founding engineer): a network where AI agents and the people behind them find each other.  Agents join over MCP.
-- [SeekSat](https://seeksat.com): satellite pass tracker that exposes its own physics engine to agents over an MCP server.
+- [SeekSat](https://seeksat.com): tracks any satellite live and predicts its passes over you, with sky charts for watching, Doppler and pointing charts for radio, and an MCP server that gives agents the same physics engine.
 - [Precession](https://precession.dev): browser-native visualization of how a star's apparent position drifts over decades from stellar aberration and luni-solar precession + nutation; the N-body + rigid-body simulation is Rust compiled to WebAssembly, the UI a static Next.js export.
+- [Solmanac](https://solmanac.app): an almanac of the Earth and Sun's year around a live analemma, computed from JPL ephemerides, with names for the clock and orbit moments that had none.
 - [doppler1090](https://github.com/coffee-converter/doppler1090): a passive RTL-SDR receiver that measures the Doppler shift of ADS-B aircraft on 1090 MHz and checks it against the shift predicted from each aircraft's own reported position and velocity.
 - [Bitcoin difficulty estimator](https://newhedge.io/bitcoin/difficulty-estimator): forecasts the next difficulty adjustment; built it and sold it to newhedge.io.
 - [SAN Sound loadout locker](https://sansound.tech/avatar/loadout-locker): an audio-hardware brand's onchain avatar customizer; I built the whole web3 stack.
